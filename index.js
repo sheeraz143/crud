@@ -5,9 +5,12 @@ const userRouter = require("./routes/user");
 
 const app = express();
 const PORT = 3000;
-
+const uri =
+  "mongodb+srv://dbconnect:2QiXQ2qUTCUWCe5a@users.uhufba9.mongodb.net/mydatabase?retryWrites=true&w=majority";
+// const uri =
+//   "mongodb+srv://<dbconnect>:<2QiXQ2qUTCUWCe5a>@users.uhufba9.mongodb.net/mydatabase?retryWrites=true&w=majority";
 // Connect to MongoDB
-connectMongoDB("mongodb://127.0.0.1:27017/dbconnect")
+connectMongoDB(uri)
   .then(() => {
     console.log("mongodb connected");
   })
